@@ -40,9 +40,9 @@ export function HomeClient({ recentPosts, categories }: HomeClientProps) {
               <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tighter">
                 AI/ML Engineer
               </h1>
+              <h6 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold tracking-tighter">Transforming Ideas into AI Solutions</h6>
               <p className="text-lg md:text-xl text-muted-foreground max-w-[600px] mx-auto lg:mx-0">
-                Hello! I'm a passionate AI/ML Engineer with expertise in developing cutting-edge solutions 
-                using machine learning and deep learning technologies.
+                Hello! I'm a passionate AI/ML Engineer skilled in building innovative solutions using cutting-edge machine learning and deep learning techniques. Let’s create something extraordinary together!
               </p>
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4"
@@ -57,7 +57,7 @@ export function HomeClient({ recentPosts, categories }: HomeClientProps) {
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <Link href="/contact">Contact Me</Link>
+                  <Link href="mailto:danialasimbashir@gmail.com">Contact Me</Link>
                 </Button>
               </motion.div>
             </motion.div>
@@ -121,6 +121,14 @@ export function HomeClient({ recentPosts, categories }: HomeClientProps) {
             </p>
           </motion.div>
           <ProjectsGrid />
+          <div className="flex justify-center mt-8">
+            <Button variant="ghost" asChild>
+              <Link href="/projects" className="group">
+                View all projects
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -175,7 +183,7 @@ export function HomeClient({ recentPosts, categories }: HomeClientProps) {
         </div>
       </section>
 
-      {/* Categories Section */}
+      {/* Categories Section
       <section className="py-16 md:py-20">
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter mb-8">Categories</h2>
@@ -196,7 +204,7 @@ export function HomeClient({ recentPosts, categories }: HomeClientProps) {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-16 md:py-20">
@@ -215,7 +223,7 @@ export function HomeClient({ recentPosts, categories }: HomeClientProps) {
               Ready to transform your ideas into reality? Let's collaborate and create innovative AI solutions.
             </p>
             <Button size="lg" className="mt-8" asChild>
-              <Link href="/contact">Get in Touch</Link>
+              <Link href="mailto:danialasimbashir@gmail.com">Get in Touch</Link>
             </Button>
           </motion.div>
         </div>
