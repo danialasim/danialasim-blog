@@ -34,27 +34,18 @@ const achievements = [
     icon: Award,
     title: "Awards & Recognition",
     items: [
-      "Best AI Paper Award - ICML 2023",
-      "Top AI Researcher - Tech Magazine",
-      "Innovation Excellence Award"
-    ]
-  },
-  {
-    icon: BookOpen,
-    title: "Publications",
-    items: [
-      "Deep Learning Architectures (2023)",
-      "Advanced NLP Techniques (2022)",
-      "Computer Vision Systems (2021)"
+      "• 100 Days of Code: The Complete Python Pro Bootcamp by Angela Yu (2024)",
+      "• Machine Learning Specialization by Andrew Ng (2024)", 
+      "• TensorFlow for Deep Learning Bootcamp by Zero to Mastery (2024)"
     ]
   },
   {
     icon: Briefcase,
     title: "Experience",
     items: [
-      "Senior AI Engineer - Tech Corp",
-      "ML Researcher - AI Lab",
-      "Data Scientist - StartupX"
+      "• Freelance AI/ML Engineer – Upwork (2023–Present)\nDesigned and implemented custom AI solutions, including hand gesture control software and object detection systems, tailored to client needs.",
+      "• Frontend and WordPress Developer – Fiverr (2019–2022)\nCreated responsive websites and user interfaces for diverse clients.",
+      "• AI-Powered Website Design – Healing Lounge (2024)\nDelivered a custom website for a therapist, combining intuitive features with modern aesthetics."
     ]
   }
 ]
@@ -85,7 +76,7 @@ export default function AboutPage() {
           <div className="relative w-48 h-48 mx-auto">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-primary-foreground/20 animate-pulse" />
             <Image
-              src="/placeholder.svg?height=200&width=200"
+              src="/images/about-page.webp"
               alt="Profile"
               width={200}
               height={200}
@@ -126,24 +117,18 @@ export default function AboutPage() {
           <div className="prose prose-gray dark:prose-invert">
             <h1 className="text-4xl font-bold tracking-tight">About Me</h1>
             <p className="text-xl text-muted-foreground">
-              Hello! I'm an AI/ML Engineer passionate about pushing the boundaries of artificial intelligence
-              and machine learning. With over 5 years of experience in the field, I've worked on various
-              cutting-edge projects ranging from computer vision to natural language processing.
+              Hello! I'm an AI/ML Engineer passionate about developing innovative solutions that bridge the gap between technology and human interaction. With expertise in AI, machine learning, and software development, I've worked on diverse projects ranging from natural language processing to computer vision applications.
             </p>
             <p className="text-muted-foreground">
-              My journey in AI began during my graduate studies, where I focused on deep learning
-              architectures and their applications. Since then, I've been fortunate to work with
-              amazing teams and contribute to groundbreaking projects that have made real-world impact.
+              My journey in AI was shaped by extensive learning through programs like Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp and Andrew Ng's Machine Learning Specialization. These experiences laid the foundation for impactful projects, including hand gesture control software that leverages computer vision for intuitive control and an object detection system designed for real-world applications.
             </p>
             <p className="text-muted-foreground">
-              When I'm not training models or optimizing algorithms, you can find me writing technical
-              blogs, contributing to open-source projects, or speaking at AI conferences. I'm particularly
-              interested in making AI more accessible and ethical.
+              When I’m not building intelligent systems, I focus on open-source contributions, showcasing my projects on GitHub, and exploring the latest advancements in AI to create meaningful solutions.
             </p>
           </div>
 
           {/* Achievements Grid */}
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {achievements.map((achievement) => (
               <Card key={achievement.title}>
                 <CardContent className="p-6">
@@ -168,7 +153,7 @@ export default function AboutPage() {
                   <p className="text-muted-foreground">Let's work together on your next AI project.</p>
                 </div>
                 <Button asChild>
-                  <Link href="/contact">Get in Touch</Link>
+                  <Link href="mailto:danialasimbashir@gmail.com">Get in Touch</Link>
                 </Button>
               </div>
             </CardContent>
