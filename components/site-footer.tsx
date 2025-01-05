@@ -29,7 +29,7 @@ export function SiteFooter() {
               className="rounded-full text-foreground dark:text-white hover:text-[#555] dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
               asChild
             >
-              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.linkedin.com/in/danialasim/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5 md:h-6 md:w-6" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
@@ -42,7 +42,7 @@ export function SiteFooter() {
               className="rounded-full text-foreground dark:text-white hover:text-[#555] dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
               asChild
             >
-              <Link href="mailto:contact@example.com">
+              <Link href="mailto:danialasimbashir@gmail.com">
                 <Mail className="h-5 w-5 md:h-6 md:w-6" />
                 <span className="sr-only">Email</span>
               </Link>
@@ -55,7 +55,7 @@ export function SiteFooter() {
               className="rounded-full text-foreground dark:text-white hover:text-[#555] dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
               asChild
             >
-              <Link href="tel:+1234567890">
+              <Link href="tel:+923249759646">
                 <Phone className="h-5 w-5 md:h-6 md:w-6" />
                 <span className="sr-only">Phone</span>
               </Link>
@@ -68,14 +68,14 @@ export function SiteFooter() {
               className="rounded-full text-foreground dark:text-white hover:text-[#555] dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
               asChild
             >
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/danialasim" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5 md:h-6 md:w-6" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </Button>
           </div>
           <div className="text-foreground/90 dark:text-gray-300 text-xs md:text-sm flex flex-wrap items-center justify-center gap-2 text-center px-4 mt-8">
-            <span>Danial Asim</span>
+            <Link href="/" className="hover:text-primary transition-colors">Danial Asim</Link>
             <span>•</span>
             <span>© 2024</span>
             <span>•</span>
