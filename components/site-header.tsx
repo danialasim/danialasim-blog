@@ -46,12 +46,6 @@ export function SiteHeader() {
           >
             Blog
           </Link>
-          <Link
-            href="/contact"
-            className="text-sm font-medium transition-colors hover:text-primary"
-          >
-            Contact
-          </Link>
         </nav>
         <div className="ml-auto flex items-center space-x-2 md:space-x-4">
           <Button variant="default" size="sm" className="hidden md:inline-flex gap-2" asChild>
