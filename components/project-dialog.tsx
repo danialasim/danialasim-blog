@@ -17,13 +17,13 @@ export function ProjectDialog({ isOpen, onClose, project }: ProjectDialogProps) 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[800px] p-0 overflow-hidden">
-        <div className="flex flex-col md:flex-row max-h-[85vh] md:max-h-none">
-          <div className="relative w-full md:w-1/2 h-[160px] sm:h-[200px] md:h-auto shrink-0">
+        <div className="flex flex-col md:flex-row">
+          <div className="relative w-full md:w-1/2 h-auto">
             <Image
               src={project.image}
               alt={project.title}
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
@@ -79,4 +79,3 @@ export function ProjectDialog({ isOpen, onClose, project }: ProjectDialogProps) 
     </Dialog>
   )
 }
-
