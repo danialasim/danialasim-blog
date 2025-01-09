@@ -3,11 +3,10 @@ import { Metadata } from 'next'
 export const siteConfig = {
   name: 'AI/ML Engineer Portfolio',
   description: 'Personal portfolio and blog of an AI/ML Engineer',
-  url: process.env.NEXT_PUBLIC_BASE_URL || 'https://your-domain.com',
+  url: process.env.NEXT_PUBLIC_BASE_URL || 'https://www.danialasim.com/',
   ogImage: '/og-image.jpg',
   links: {
-    twitter: 'https://twitter.com/yourusername',
-    github: 'https://github.com/yourusername',
+    github: 'https://github.com/danialasim',
   },
 }
 
@@ -17,8 +16,8 @@ export const defaultMetadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  authors: [{ name: 'John Doe' }],
-  creator: 'John Doe',
+  authors: [{ name: 'Danial Asim' }],
+  creator: 'Danial Asim',
   metadataBase: new URL(siteConfig.url),
   openGraph: {
     type: 'website',
@@ -41,7 +40,7 @@ export const defaultMetadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    creator: '@yourusername',
+    creator: '@danialasim',
   },
   icons: {
     icon: '/icon.png',
