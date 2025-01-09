@@ -118,28 +118,41 @@ export default async function BlogPost({ params }: Props) {
         </div>
 
         {/* Recent Posts */}
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold mb-6">Recent Posts</h2>
-          <div className="grid gap-6 md:grid-cols-3">
+        <div className="mt-12 sm:mt-16">
+          <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Recent Posts</h2>
+          <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             {recentPosts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`}>
                 <Card className="h-full hover:bg-muted/50 transition-colors">
-                  <Image
-                    src={post.frontmatter.featureImage}
-                    alt={post.frontmatter.title}
-                    width={400}
-                    height={200}
-                    className="rounded-t-lg object-cover w-full h-48"
-                  />
-                  <CardHeader>
-                    <CardTitle className="line-clamp-2">
+                  <div className="relative h-40 sm:h-48">
+                    <Image
+                      src={post.frontmatter.featureImage}
+                      alt={post.frontmatter.title}
+                      fill
+                      className="rounded-t-lg object-cover"
+                    />
+                  </div>
+                  <CardHeader className="p-3 sm:p-4">
+                    <CardTitle className="text-lg sm:text-xl line-clamp-2">
                       {post.frontmatter.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground line-clamp-3">
+                  <CardContent className="p-3 sm:p-4 pt-0">
+                    <p className="text-sm sm:text-base text-muted-foreground line-clamp-2 mb-3">
                       {post.frontmatter.excerpt}
                     </p>
+                    <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="h-3 w-3 sm:h-4 sm:w-4" />
+                        <time dateTime={post.frontmatter.date}>
+                          {format(new Date(post.frontmatter.date), 'MMM d, yyyy')}
+                        </time>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
+                        <span>{post.frontmatter.readingTime} min read</span>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </Link>
