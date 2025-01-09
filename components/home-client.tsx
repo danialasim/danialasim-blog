@@ -42,7 +42,7 @@ export function HomeClient({ recentPosts, categories }: HomeClientProps) {
               </h1>
               <h6 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold tracking-tighter">Transforming Ideas into AI Solutions</h6>
               <p className="text-lg md:text-xl text-muted-foreground max-w-[600px] mx-auto lg:mx-0">
-                Hello! I'm a passionate AI/ML Engineer skilled in building innovative solutions using cutting-edge machine learning and deep learning techniques. Let’s create something extraordinary together!
+                Hello! I&apos;m a passionate AI/ML Engineer skilled in building innovative solutions using cutting-edge machine learning and deep learning techniques. Let&apos;s create something extraordinary together!
               </p>
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4"
