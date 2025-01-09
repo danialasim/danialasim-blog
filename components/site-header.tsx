@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Cpu, Download } from 'lucide-react'
+import { Download, Menu } from 'lucide-react'
 import { ModeToggle } from "./mode-toggle"
 import { MobileNav } from "./mobile-nav"
 import { Button } from "./ui/button"
@@ -67,4 +67,3 @@ export function SiteHeader() {
     </header>
   )
 }
-

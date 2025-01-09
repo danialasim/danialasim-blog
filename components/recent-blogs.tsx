@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Clock, Calendar } from 'lucide-react'
 
 const recentPosts = [
@@ -60,11 +61,13 @@ export function RecentBlogs() {
           >
             <Link href="/blog" className="block h-full">
               <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="relative h-48">
-                  <img
+                <div className="relative h-48 overflow-hidden rounded-lg">
+                  <Image
                     src={post.image}
                     alt={post.title}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-background/0" />
                   <Badge className="absolute top-4 left-4" variant="secondary">
@@ -103,4 +106,3 @@ export function RecentBlogs() {
     </div>
   )
 }
-

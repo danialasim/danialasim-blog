@@ -217,10 +217,10 @@ export function HomeClient({ recentPosts, categories }: HomeClientProps) {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter">
-              Let's Build Something Amazing Together
+              Let&apos;s Build Something Amazing Together
             </h2>
             <p className="mx-auto max-w-[600px] text-muted-foreground md:text-lg mt-4">
-              Ready to transform your ideas into reality? Let's collaborate and create innovative AI solutions.
+              Ready to transform your ideas into reality? Let&apos;s collaborate and create innovative AI solutions.
             </p>
             <Button size="lg" className="mt-8" asChild>
               <Link href="mailto:danialasimbashir@gmail.com">Get in Touch</Link>
@@ -231,4 +231,3 @@ export function HomeClient({ recentPosts, categories }: HomeClientProps) {
     </div>
   )
 }
-
