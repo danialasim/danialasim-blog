@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Github, ExternalLink } from 'lucide-react'
 import Link from "next/link"
@@ -173,4 +172,3 @@ export default function ProjectsPage() {
     </div>
   )
 }
-

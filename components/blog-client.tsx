@@ -3,14 +3,27 @@
 import { useState } from "react"
 import Link from 'next/link'
 import Image from 'next/image'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Search } from 'lucide-react'
 
+interface BlogPost {
+  slug: string
+  frontmatter: {
+    title: string
+    date: string
+    excerpt: string
+    category: string
+    featureImage: string
+    readingTime: number
+    tags: string[]
+  }
+}
+
 interface BlogClientProps {
-  allPosts: any[]
+  allPosts: BlogPost[]
   categories: string[]
 }
 
@@ -122,4 +135,3 @@ export function BlogClient({ allPosts, categories }: BlogClientProps) {
     </div>
   )
 }
-

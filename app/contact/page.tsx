@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, MessageSquare, Phone, MapPin } from 'lucide-react'
 import { toast } from "sonner"
+import { submitContact } from "./action"
 
 export default function ContactPage() {
   const [pending, setPending] = useState(false)
@@ -14,12 +15,15 @@ export default function ContactPage() {
   async function handleSubmit(formData: FormData) {
     setPending(true)
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      toast.success("Message sent successfully!")
-      const form = document.querySelector("form") as HTMLFormElement
-      form?.reset()
-    } catch (error) {
+      const result = await submitContact(formData)
+      if (result.success) {
+        toast.success(result.message)
+        const form = document.querySelector("form") as HTMLFormElement
+        form?.reset()
+      } else {
+        toast.error(result.message)
+      }
+    } catch {
       toast.error("Something went wrong. Please try again.")
     }
     setPending(false)
@@ -33,11 +37,11 @@ export default function ContactPage() {
           <CardHeader>
             <CardTitle>Get in Touch</CardTitle>
             <CardDescription>
-              Fill out the form below and I'll get back to you as soon as possible.
+              Fill out the form below and I&apos;ll get back to you as soon as possible.
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form action={handleSubmit} className="space-y-4">
+            <form onSubmit={(e) => { e.preventDefault(); handleSubmit(new FormData(e.currentTarget)) }} className="space-y-4">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                   Name
@@ -161,4 +165,3 @@ export default function ContactPage() {
     </div>
   )
 }
-

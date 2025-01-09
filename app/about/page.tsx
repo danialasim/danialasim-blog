@@ -6,28 +6,8 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import Link from "next/link"
-import { Github, Twitter, Linkedin, Mail, Phone, BookOpen, Award, Briefcase, Download } from 'lucide-react'
+import { Award, Briefcase } from 'lucide-react'
 import { SocialLinks } from "@/components/social-links"
-
-// Custom Hugging Face icon component
-function HuggingFaceIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-3.5c.73 0 1.32-.59 1.32-1.32 0-.73-.59-1.32-1.32-1.32-.73 0-1.32.59-1.32 1.32 0 .73.59 1.32 1.32 1.32zm4 0c.73 0 1.32-.59 1.32-1.32 0-.73-.59-1.32-1.32-1.32-.73 0-1.32.59-1.32 1.32 0 .73.59 1.32 1.32 1.32z"/>
-    </svg>
-  )
-}
 
 const achievements = [
   {
@@ -117,13 +97,13 @@ export default function AboutPage() {
           <div className="prose prose-gray dark:prose-invert">
             <h1 className="text-4xl font-bold tracking-tight">About Me</h1>
             <p className="text-xl text-muted-foreground">
-              Hello! I'm an AI/ML Engineer passionate about developing innovative solutions that bridge the gap between technology and human interaction. With expertise in AI, machine learning, and software development, I've worked on diverse projects ranging from natural language processing to computer vision applications.
+              Hello! I&apos;m an AI/ML Engineer passionate about developing innovative solutions that bridge the gap between technology and human interaction. With expertise in AI, machine learning, and software development, I&apos;ve worked on diverse projects ranging from natural language processing to computer vision applications.
             </p>
             <p className="text-muted-foreground">
-              My journey in AI was shaped by extensive learning through programs like Angela Yu's 100 Days of Code: The Complete Python Pro Bootcamp and Andrew Ng's Machine Learning Specialization. These experiences laid the foundation for impactful projects, including hand gesture control software that leverages computer vision for intuitive control and an object detection system designed for real-world applications.
+              My journey in AI was shaped by extensive learning through programs like Angela Yu&apos;s 100 Days of Code: The Complete Python Pro Bootcamp and Andrew Ng&apos;s Machine Learning Specialization. These experiences laid the foundation for impactful projects, including hand gesture control software that leverages computer vision for intuitive control and an object detection system designed for real-world applications.
             </p>
             <p className="text-muted-foreground">
-              When I’m not building intelligent systems, I focus on open-source contributions, showcasing my projects on GitHub, and exploring the latest advancements in AI to create meaningful solutions.
+              When I&apos;m not building intelligent systems, I focus on open-source contributions, showcasing my projects on GitHub, and exploring the latest advancements in AI to create meaningful solutions.
             </p>
           </div>
 
@@ -150,7 +130,7 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div>
                   <h3 className="font-semibold text-lg mb-2">Interested in collaboration?</h3>
-                  <p className="text-muted-foreground">Let's work together on your next AI project.</p>
+                  <p className="text-muted-foreground">Let&apos;s work together on your next AI project.</p>
                 </div>
                 <Button asChild>
                   <Link href="mailto:danialasimbashir@gmail.com">Get in Touch</Link>
@@ -163,4 +143,3 @@ export default function AboutPage() {
     </div>
   )
 }
-

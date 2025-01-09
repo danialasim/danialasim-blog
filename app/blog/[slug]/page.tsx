@@ -7,7 +7,6 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { NewsletterForm } from '@/components/newsletter-form'
 import { Button } from "@/components/ui/button"
-import { FeatureImage } from '@/components/feature-image'
 
 interface PostFrontmatter {
   title: string
@@ -147,4 +146,3 @@ export default async function BlogPost({ params }: Props) {
     </div>
   )
 }
-

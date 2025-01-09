@@ -9,12 +9,23 @@ import { ToolsGrid } from "@/components/tools-grid"
 import { ProjectsGrid } from "@/components/projects-grid"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 
-interface HomeClientProps {
-  recentPosts: any[]
-  categories: string[]
+interface BlogPost {
+  slug: string
+  frontmatter: {
+    title: string
+    date: string
+    excerpt: string
+    category: string
+    featureImage: string
+    readingTime: number
+  }
 }
 
-export function HomeClient({ recentPosts, categories }: HomeClientProps) {
+interface HomeClientProps {
+  recentPosts: BlogPost[]
+}
+
+export function HomeClient({ recentPosts }: HomeClientProps) {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
