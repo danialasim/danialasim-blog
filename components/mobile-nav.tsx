@@ -32,10 +32,6 @@ export function MobileNav() {
       href: "/blog",
       label: "Blog",
     },
-    {
-      href: "/contact",
-      label: "Contact",
-    },
   ]
 
   return (
@@ -73,4 +69,3 @@ export function MobileNav() {
     </Sheet>
   )
 }
-
