@@ -55,7 +55,7 @@ export function SiteFooter() {
               className="rounded-full text-foreground dark:text-white hover:text-[#555] dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
               asChild
             >
-              <Link href="tel:+923249759646">
+              <Link href="tel:+923249759645">
                 <Phone className="h-5 w-5 md:h-6 md:w-6" />
                 <span className="sr-only">Phone</span>
               </Link>
