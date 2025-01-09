@@ -20,13 +20,6 @@ export const defaultMetadata: Metadata = {
   authors: [{ name: 'John Doe' }],
   creator: 'John Doe',
   metadataBase: new URL(siteConfig.url),
-  icons: {
-    icon: [
-      { url: '/icon.ico', sizes: '16x16', type: 'image/x-icon' },
-      { url: '/icon.ico', sizes: '32x32', type: 'image/x-icon' },
-    ],
-    shortcut: '/icon.ico',
-  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -50,17 +43,14 @@ export const defaultMetadata: Metadata = {
     images: [siteConfig.ogImage],
     creator: '@yourusername',
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/icon.ico',
+    apple: '/apple-icon.png',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/apple-touch-icon-precomposed.png',
     },
   },
   manifest: '/site.webmanifest',
 }
-
