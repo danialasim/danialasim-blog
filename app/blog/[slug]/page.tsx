@@ -7,10 +7,12 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { NewsletterForm } from '@/components/newsletter-form'
 import { Button } from "@/components/ui/button"
+import { format } from 'date-fns'
 
 interface PostFrontmatter {
   title: string
   date: string
+  author: string
   tags: string[]
   excerpt: string
   category: string
@@ -56,18 +58,20 @@ export default async function BlogPost({ params }: Props) {
                 </Link>
               </Button>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">{typedFrontmatter.title}</h1>
-              <div className="flex flex-wrap gap-4 items-center text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <User className="h-4 w-4" />
-                  <span>John Doe</span>
-                </div>
+              <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
-                  <span>{new Date(typedFrontmatter.date).toLocaleDateString()}</span>
+                  <time dateTime={typedFrontmatter.date}>
+                    {format(new Date(typedFrontmatter.date), 'MMMM d, yyyy')}
+                  </time>
+                </div>
+                <div className="flex items-center gap-2">
+                  <User className="h-4 w-4" />
+                  <span>{typedFrontmatter.author}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4" />
-                  <span>{Math.ceil(typedFrontmatter.readingTime)} min read</span>
+                  <span>{typedFrontmatter.readingTime} min read</span>
                 </div>
               </div>
             </div>
