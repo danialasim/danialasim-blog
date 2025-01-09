@@ -36,9 +36,9 @@ export default async function BlogPost({ params }: Props) {
     .slice(0, 3)
 
   return (
-    <div className="min-h-[calc(100vh-4rem)]">
+    <div className="w-full">
       {/* Hero Section with Image */}
-      <div className="relative h-[500px] w-full">
+      <div className="relative h-[300px] md:h-[500px] w-full">
         <Image
           src={typedFrontmatter.featureImage}
           alt={typedFrontmatter.title}
@@ -48,17 +48,17 @@ export default async function BlogPost({ params }: Props) {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background to-background/0" />
-        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-          <div className="container">
-            <div className="max-w-[800px] -ml-6">
+        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 lg:p-8">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[800px]">
               <Button variant="outline" size="sm" className="mb-4 hover:bg-background" asChild>
                 <Link href="/blog" className="flex items-center gap-2">
                   <ArrowLeft className="h-4 w-4" />
                   Back to Blog
                 </Link>
               </Button>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">{typedFrontmatter.title}</h1>
-              <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{typedFrontmatter.title}</h1>
+              <div className="flex flex-wrap items-center gap-3 text-muted-foreground text-sm md:text-base">
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
                   <time dateTime={typedFrontmatter.date}>
@@ -80,14 +80,14 @@ export default async function BlogPost({ params }: Props) {
       </div>
 
       {/* Main Content */}
-      <div className="container px-4 md:px-6 py-8 md:py-12">
-        <div className="grid gap-10 lg:grid-cols-[1fr_300px]">
-          <article className="prose prose-gray dark:prose-invert max-w-none">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 md:py-8 lg:py-12">
+        <div className="grid gap-8 lg:gap-10 lg:grid-cols-[1fr_300px]">
+          <article className="prose prose-gray dark:prose-invert max-w-none overflow-hidden">
             <MDXRemote source={content} />
           </article>
 
           {/* Sidebar */}
-          <div className="space-y-8">
+          <aside className="space-y-6 lg:space-y-8">
             <Card>
               <CardHeader>
                 <CardTitle>Popular Tags</CardTitle>
@@ -114,7 +114,7 @@ export default async function BlogPost({ params }: Props) {
                 <NewsletterForm />
               </CardContent>
             </Card>
-          </div>
+          </aside>
         </div>
 
         {/* Recent Posts */}

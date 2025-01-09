@@ -144,44 +144,45 @@ export function HomeClient({ recentPosts }: HomeClientProps) {
       </section>
 
       {/* Recent Articles Section */}
-      <section className="py-16 md:py-20 bg-muted/50">
+      <section className="py-12 sm:py-16 md:py-20 bg-muted/50">
         <div className="container px-4 md:px-6">
-          <div className="space-y-8">
-            <div className="flex items-center justify-between">
+          <div className="space-y-6 sm:space-y-8">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
-                <h2 className="text-3xl font-bold tracking-tighter">Recent Articles</h2>
-                <p className="text-muted-foreground mt-2">Latest insights and tutorials in AI & ML</p>
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter">Recent Articles</h2>
+                <p className="text-muted-foreground mt-1 sm:mt-2 text-sm sm:text-base">Latest insights and tutorials in AI & ML</p>
               </div>
-              <Button variant="ghost" className="hidden sm:flex" asChild>
+              <Button variant="ghost" className="w-full sm:w-auto" asChild>
                 <Link href="/blog" className="group">
                   View all posts
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
             </div>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {recentPosts.map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`} className="block h-full">
                   <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow">
-                    <Image
-                      src={post.frontmatter.featureImage}
-                      alt={post.frontmatter.title}
-                      width={400}
-                      height={200}
-                      className="object-cover w-full h-48"
-                    />
-                    <CardHeader>
-                      <CardTitle className="line-clamp-2">{post.frontmatter.title}</CardTitle>
+                    <div className="relative h-40 sm:h-48">
+                      <Image
+                        src={post.frontmatter.featureImage}
+                        alt={post.frontmatter.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <CardHeader className="p-3 sm:p-4">
+                      <CardTitle className="text-lg sm:text-xl line-clamp-2">{post.frontmatter.title}</CardTitle>
                     </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground mb-4 line-clamp-2">{post.frontmatter.excerpt}</p>
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <div className="flex items-center">
-                          <Calendar className="mr-1 h-4 w-4" />
+                    <CardContent className="p-3 sm:p-4 pt-0">
+                      <p className="text-sm sm:text-base text-muted-foreground mb-4 line-clamp-2">{post.frontmatter.excerpt}</p>
+                      <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
+                        <div className="flex items-center gap-1">
+                          <Calendar className="h-3 w-3 sm:h-4 sm:w-4" />
                           {new Date(post.frontmatter.date).toLocaleDateString()}
                         </div>
-                        <div className="flex items-center">
-                          <Clock className="mr-1 h-4 w-4" />
+                        <div className="flex items-center gap-1">
+                          <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
                           {`${Math.ceil(post.frontmatter.readingTime)} min read`}
                         </div>
                       </div>

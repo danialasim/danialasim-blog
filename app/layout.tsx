@@ -20,17 +20,18 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <Head />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-x-hidden`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem={false}
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen flex-col">
+          <div className="relative flex min-h-screen flex-col">
             <SiteHeader />
-            <main className="flex-1 pt-16 md:pt-20 px-1 md:px-2 lg:px-3">
+            <main className="flex-1 w-full mt-16 md:mt-20">
               {children}
             </main>
             <SiteFooter />
@@ -41,4 +42,3 @@ export default function RootLayout({
     </html>
   )
 }
-

@@ -19,9 +19,9 @@ interface ProjectDialogProps {
 function ProjectDialog({ project, isOpen, onClose }: ProjectDialogProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[800px] p-0 overflow-hidden">
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="relative h-[300px] md:h-full">
+      <DialogContent className="sm:max-w-[800px] p-0 overflow-hidden max-h-[90vh] overflow-y-auto">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+          <div className="relative h-[200px] sm:h-[300px] md:h-full">
             <Image
               src={project.image}
               alt={project.title}
@@ -29,35 +29,35 @@ function ProjectDialog({ project, isOpen, onClose }: ProjectDialogProps) {
               className="object-cover"
             />
           </div>
-          <div className="p-6 space-y-6">
+          <div className="p-4 sm:p-6 space-y-4 sm:space-y-6">
             <div>
-              <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
-              <p className="text-muted-foreground">{project.longDescription}</p>
+              <h2 className="text-xl sm:text-2xl font-bold mb-2">{project.title}</h2>
+              <p className="text-sm sm:text-base text-muted-foreground">{project.longDescription}</p>
             </div>
             
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-2 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                  className="px-2 py-0.5 bg-primary/10 text-primary rounded-full text-xs sm:text-sm"
                 >
                   {tag}
                 </span>
               ))}
             </div>
 
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4">
               {Object.entries(project.stats).map(([key, value]) => (
-                <div key={key} className="text-center p-3 bg-muted rounded-lg">
-                  <div className="text-lg font-bold">{value}</div>
-                  <div className="text-xs text-muted-foreground capitalize">{key}</div>
+                <div key={key} className="text-center p-2 sm:p-3 bg-muted rounded-lg">
+                  <div className="text-base sm:text-lg font-bold">{value}</div>
+                  <div className="text-[10px] sm:text-xs text-muted-foreground capitalize">{key}</div>
                 </div>
               ))}
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
               {project.github && (
-                <Button asChild>
+                <Button className="w-full sm:w-auto" asChild>
                   <Link href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" />
                     View Code
@@ -65,7 +65,7 @@ function ProjectDialog({ project, isOpen, onClose }: ProjectDialogProps) {
                 </Button>
               )}
               {project.huggingface && (
-                <Button asChild>
+                <Button className="w-full sm:w-auto" asChild>
                   <Link href={project.huggingface} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     View Demo
@@ -84,14 +84,14 @@ export default function ProjectsPage() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   return (
-    <div className="container px-4 md:px-6 py-8 md:py-12">
-      <div className="space-y-2 text-center mb-8">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">Projects</h1>
-        <p className="text-muted-foreground">
+    <div className="container px-4 md:px-6 py-6 sm:py-8 md:py-12">
+      <div className="space-y-1 sm:space-y-2 text-center mb-6 sm:mb-8">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter">Projects</h1>
+        <p className="text-sm sm:text-base text-muted-foreground">
           A showcase of my recent work in AI and machine learning.
         </p>
       </div>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <motion.div
             key={project.title}
