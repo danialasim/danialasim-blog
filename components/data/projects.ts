@@ -44,17 +44,17 @@ export const projects: Project[] = [
     }
   },
   {
-    title: "MLOps Pipeline",
+    title: "Portfolio Website",
     description: "End-to-end automated machine learning pipeline for model training, testing, and deployment.",
-    image: "/placeholder.svg?height=300&width=600",
-    longDescription: "A complete MLOps pipeline that automates the training, validation, and deployment of machine learning models. Includes features like A/B testing, model versioning, and automated retraining.",
-    tags: ["MLOps", "Docker", "Kubernetes", "CI/CD"],
+    image: "/projects/web-project.png",
+    longDescription: "A modern portfolio website built with React, Next.js, and TailwindCSS. Features include responsive design, server-side rendering, and continuous deployment with Vercel. Optimized for performance and SEO.",
+    tags: ["React", "Next.js", "TailwindCSS", "Vercel"],
     github: "https://github.com",
     huggingface: "https://huggingface.co",
     stats: {
       deployments: 100,
       uptime: "99.9%",
-      models: 20
+      performance: "100%"
     }
   }
 ] 
