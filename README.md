@@ -1,4 +1,4 @@
-# Portfolio & Blog Website
+# Portfolio & Blog Website.
 
 A modern, responsive portfolio and blog website built with Next.js 14, TypeScript, and Tailwind CSS. This website showcases my work, skills, and blog posts with a focus on performance, accessibility, and user experience.
 
