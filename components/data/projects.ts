@@ -49,8 +49,8 @@ export const projects: Project[] = [
     image: "/projects/web-project.png",
     longDescription: "A modern portfolio website built with React, Next.js, and TailwindCSS. Features include responsive design, server-side rendering, and continuous deployment with Vercel. Optimized for performance and SEO.",
     tags: ["React", "Next.js", "TailwindCSS", "Vercel"],
-    github: "https://github.com",
-    huggingface: "https://huggingface.co",
+    github: "https://github.com/danialasim/danialasim-blog",
+    huggingface: "https://www.danialasim.com/",
     stats: {
       deployments: 100,
       uptime: "99.9%",
