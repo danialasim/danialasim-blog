@@ -16,11 +16,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "AI Image Recognition",
-    description: "Deep learning model for real-time object detection using state-of-the-art computer vision techniques.",
-    image: "/placeholder.svg?height=300&width=600",
+    title: "AI Virtual Mouse",
+    description: "Control your computer with your hand using hand gesture recognition.",
+    image: "/projects/gesture_control.webp",
     longDescription: "A state-of-the-art computer vision system that can detect and classify objects in real-time using deep learning. Built with PyTorch and optimized for edge devices. Features include multi-object tracking, pose estimation, and real-time performance optimization.",
-    tags: ["PyTorch", "Computer Vision", "Deep Learning", "YOLO"],
+    tags: [
+      "PyTorch",
+      "Computer Vision",
+      "Deep Learning",
+      "Hand Gesture Recognition",
+      "YOLO"
+    ],
     github: "https://github.com",
     huggingface: "https://huggingface.co",
     stats: {
