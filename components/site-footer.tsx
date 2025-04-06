@@ -77,7 +77,7 @@ export function SiteFooter() {
           <div className="text-foreground/90 dark:text-gray-300 text-xs md:text-sm flex flex-wrap items-center justify-center gap-2 text-center px-4 mt-8">
             <Link href="/" className="hover:text-primary transition-colors">Danial Asim</Link>
             <span>•</span>
-            <span>©2025</span>
+            <span>© 2025</span>
             <span>•</span>
             <span>All rights reserved</span>
           </div>
