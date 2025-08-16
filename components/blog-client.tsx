@@ -118,7 +118,7 @@ export function BlogClient({ allPosts, categories }: BlogClientProps) {
                     </div>
                     <div className="flex items-center justify-between">
                       <div className="text-sm text-muted-foreground">
-                        {new Date(post.frontmatter.date).toLocaleDateString()}
+                        {new Date(post.frontmatter.date).toLocaleDateString('en-US')}
                       </div>
                       <span className="text-primary hover:text-primary/80 transition-colors font-medium flex items-center gap-1">
                         Read more

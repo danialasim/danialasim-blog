@@ -179,7 +179,7 @@ export function HomeClient({ recentPosts }: HomeClientProps) {
                       <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
                         <div className="flex items-center gap-1">
                           <Calendar className="h-3 w-3 sm:h-4 sm:w-4" />
-                          {new Date(post.frontmatter.date).toLocaleDateString()}
+                          {new Date(post.frontmatter.date).toLocaleDateString('en-US')}
                         </div>
                         <div className="flex items-center gap-1">
                           <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
