@@ -21,12 +21,14 @@ function ProjectDialog({ project, isOpen, onClose }: ProjectDialogProps) {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[800px] p-0 overflow-hidden max-h-[90vh] overflow-y-auto">
         <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
-          <div className="relative h-[200px] sm:h-[300px] md:h-full">
+          <div className="w-full flex items-center justify-center bg-muted rounded-lg overflow-hidden min-h-[300px] sm:min-h-[400px] max-h-[500px]">
             <Image
               src={project.image}
               alt={project.title}
-              fill
-              className="object-cover"
+              width={700}
+              height={420}
+              className="max-w-full max-h-[480px] w-auto h-auto object-contain"
+              priority
             />
           </div>
           <div className="p-4 sm:p-6 space-y-4 sm:space-y-6">
