@@ -15,38 +15,77 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
-    title: "AI Virtual Mouse",
-    description: "Control your computer with your hand using hand gesture recognition.",
-    image: "/projects/gesture_control.webp",
-    longDescription: "A state-of-the-art computer vision system that can detect and classify objects in real-time using deep learning. Built with PyTorch and optimized for edge devices. Features include multi-object tracking, pose estimation, and real-time performance optimization.",
+    {
+    title: "Fraud Detection",
+    description: "A comprehensive fraud detection system using machine learning.",
+    image: "/projects/fraud_detection.png",
+    longDescription: "A complete end-to-end fraud detection system featuring ML model training, API deployment, real-time detection, and a user-friendly dashboard. Built with XGBoost for model training and Flask for API deployment.",
     tags: [
-      "PyTorch",
-      "Computer Vision",
+      "Ensemble Learning",
+      "XGBoost",
       "Deep Learning",
-      "Hand Gesture Recognition",
-      "YOLO"
+      "Neural Networks",
+      "Fraud Detection"
     ],
-    github: "https://github.com",
-    huggingface: "https://huggingface.co",
+    github: "https://github.com/danialasim/fraud-detection-ml-system",
+    huggingface: "https://huggingface.co/spaces/DanialAsim/fraud-detection-system",
     stats: {
-      accuracy: "98%",
-      speed: "30 FPS",
-      models: 5
+      accuracy: "92%",
+      Precision: "85%+",
+      models: 3
+    }
+  },
+    {
+    title: "Movie Recommendation System",
+    description: "A comprehensive movie recommendation system using machine learning models (SAE and RBM) with Docker containerization, FastAPI, and Prometheus/Grafana monitoring.",
+    image: "/projects/movie_recommendations.png",
+    longDescription: "A state-of-the-art movie recommendation system that leverages collaborative filtering and content-based filtering techniques. Built with FastAPI for the backend and Docker for containerization.",
+    tags: [
+      "Machine Learning",
+      "Recommendation Systems",
+      "Deep Learning",
+      "Restricted Boltzmann Machine",
+      "AutoEncoder"
+    ],
+    github: "https://github.com/danialasim/movie-recommendation-system",
+    huggingface: "https://huggingface.co/spaces/DanialAsim/recommendation-system",
+    stats: {
+      RMSE: "0.901",
+      Parameters: "127.5K",
+      models: 2
     }
   },
   {
-    title: "NLP Chatbot",
-    description: "Advanced conversational AI using transformer models and context-aware response generation.",
-    image: "/placeholder.svg?height=300&width=600",
-    longDescription: "An intelligent chatbot powered by transformer models, capable of understanding context and generating human-like responses. Features include multi-turn conversations, emotion detection, and integration with various platforms.",
-    tags: ["Transformers", "NLP", "PyTorch", "BERT"],
-    github: "https://github.com",
-    huggingface: "https://huggingface.co",
+    title: "Wine Quality Prediction",
+    description: "Predicting wine quality using machine learning.",
+    image: "/projects/wine_quality_predictor.png",
+    longDescription: "A comprehensive wine quality prediction system that utilizes various machine learning algorithms to predict the quality of wine based on its chemical properties. Built with Scikit-learn and Flask.",
+    tags: [
+      "Machine Learning",
+      "Regression",
+      "Scikit-learn",
+      "Flask"
+    ],
+    github: "https://github.com/danialasim/machinelearningproject",
+    liveDemo: "https://dagshub.com/danialasimbashir/machinelearningproject.mlflow/",
     stats: {
-      accuracy: "95%",
-      languages: 10,
-      users: "1000+"
+      rmse: "0.75",
+      mae: "0.59",
+      models: 1
+    }
+  },
+  {
+    title: "Text Summarization With Fine-Tuning",
+    description: "Advanced conversational AI using transformer models and context-aware response generation.",
+    image: "/projects/text_summarization.png",
+    longDescription: "An end-to-end Text Summarization project built with modern MLOps practices using Hugging Face Transformers, PEGASUS model, and modular architecture. This project demonstrates production-ready machine learning pipeline with proper configuration management, logging, and reproducible experiments.",
+    tags: ["Transformers", "NLP", "PyTorch", "Sequence"],
+    github: "https://github.com/danialasim/textsummarizer",
+    huggingface: "https://huggingface.co/spaces/DanialAsim/text-summarization",
+    stats: {
+      ROUGE1: "0.47+",
+      languages: 1,
+      model: "PEGASUS model"
     }
   },
   {
