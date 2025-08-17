@@ -53,7 +53,32 @@ const tools = [
     name: "NumPy",
     emoji: "🔢",
     category: "Data Science"
-  }
+  },
+  {
+    name: "MLflow",
+    emoji: "🧪",
+    category: "MLOps"
+  },
+  {
+    name: "Weights & Biases",
+    emoji: "📊",
+    category: "MLOps"
+  },
+  {
+    name: "DVC",
+    emoji: "🗃️",
+    category: "MLOps"
+  },
+  {
+    name: "Docker",
+    emoji: "🐳",
+    category: "DevOps"
+  },
+  {
+    name: "CI/CD",
+    emoji: "🔁",
+    category: "DevOps"
+  },
 ]
 
 export function ToolsGrid() {
