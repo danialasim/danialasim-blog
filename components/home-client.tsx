@@ -7,6 +7,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ToolsGrid } from "@/components/tools-grid"
 import { ProjectsGrid } from "@/components/projects-grid"
+import { projects } from "@/components/data/projects"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 
 interface BlogPost {
@@ -131,7 +132,7 @@ export function HomeClient({ recentPosts }: HomeClientProps) {
               Explore some of my recent work in AI and machine learning.
             </p>
           </motion.div>
-          <ProjectsGrid />
+          <ProjectsGrid projects={projects.slice(0, 3)} />
           <div className="flex justify-center mt-8">
             <Button variant="ghost" asChild>
               <Link href="/projects" className="group">

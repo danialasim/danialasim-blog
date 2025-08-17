@@ -7,15 +7,15 @@ import { Button } from "@/components/ui/button"
 import { ProjectDialog } from "./project-dialog"
 import Image from "next/image"
 import { ExternalLink, Github } from 'lucide-react'
-import { Project, projects } from "./data/projects"
+import { Project } from "./data/projects"
 
-export function ProjectsGrid() {
+export function ProjectsGrid({ projects }: { projects: Project[] }) {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   return (
     <>
       <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, index) => (
+  {projects.map((project, index) => (
           <motion.div
             key={project.title}
             initial={{ opacity: 0, y: 20 }}
