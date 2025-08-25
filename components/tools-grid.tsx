@@ -79,11 +79,51 @@ const tools = [
     emoji: "🔁",
     category: "DevOps"
   },
+  {
+    name: "LangChain",
+    emoji: "🔗",
+    category: "RAG Framework"
+  },
+  {
+    name: "LlamaIndex",
+    emoji: "🦙",
+    category: "RAG Framework"
+  },
+  {
+    name: "Haystack",
+    emoji: "🌾",
+    category: "RAG Framework"
+  },
+  {
+    name: "Milvus",
+    emoji: "🗄️",
+    category: "Vector DB"
+  },
+  {
+    name: "Pinecone",
+    emoji: "🌲",
+    category: "Vector DB"
+  },
+  {
+    name: "Weaviate",
+    emoji: "🧬",
+    category: "Vector DB"
+  },
+  {
+    name: "ChromaDB",
+    emoji: "🟣",
+    category: "Vector DB"
+  },
+  {
+    name: "FAISS",
+    emoji: "🔍",
+    category: "Vector DB"
+  },
 ]
 
 export function ToolsGrid() {
   return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
       {tools.map((tool, index) => (
         <motion.div
           key={tool.name}
@@ -94,12 +134,12 @@ export function ToolsGrid() {
           viewport={{ once: true }}
         >
           <Card className="group overflow-hidden border-none bg-background/50 transition-colors hover:bg-accent">
-            <CardContent className="flex flex-col items-center justify-center p-6 text-center">
-              <span className="text-4xl mb-3" role="img" aria-label={tool.name}>
+            <CardContent className="flex flex-col items-center justify-center p-4 text-center">
+              <span className="text-4xl mb-2" role="img" aria-label={tool.name}>
                 {tool.emoji}
               </span>
               <h3 className="text-sm font-medium">{tool.name}</h3>
-              <p className="text-xs text-muted-foreground mt-1">{tool.category}</p>
+              <p className="text-xs text-muted-foreground mt-0.5">{tool.category}</p>
             </CardContent>
           </Card>
         </motion.div>
